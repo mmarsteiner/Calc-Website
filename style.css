@@ -1,0 +1,72 @@
+		body {
+			background-color: #eeeee4;
+		}
+		.menuBarParent {
+			width: 98.25%;
+			text-align: center;
+			background-color: #1e81b0;
+			padding: 15px;
+		}
+		.centerButtonsWrapper {
+			display: inline-block;
+			margin: 0 auto;
+			padding: 3px;
+		}
+		.menuButton {
+			font-size: 24px;
+			font-family: Helvetica;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 100px;
+			padding-right: 100px;
+			border: none;
+		}
+		.menuButton:hover {
+			border: 1px solid black;
+			padding-top: 9px;
+			padding-bottom: 9px;
+			padding-left: 99px;
+			padding-right: 99px;
+		}
+		#selectorCalculus {
+			margin-right: 100px;
+			background-color: #e28743;
+		}
+		#selectorOther {
+			margin-left: 100px;
+			background-color: #eab676;
+		}
+		.contentParent {
+			background-color: #76b5c5;
+			width: 98.5%;
+			text-align: center;
+		}
+		.calcContent {
+			display: inline-block;
+			margin: 0 auto;
+			width: 98.5%;
+		}
+		.contentDisplay {
+			display: none;
+			width: 98.5%;
+			height: 1000px;
+		}
+		.contentButton {
+			font-size: 24px;
+			font-family: Helvetica;
+			margin: 5px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border: none;
+			float: left;
+			background-color: #e7e7e7;
+		}
+		.contentButton:hover {
+			border: 1px solid black;
+			padding-top: 9px;
+			padding-bottom: 9px;
+			padding-left: 9px;
+			padding-right: 9px;
+		}

@@ -3,109 +3,9 @@
   <head>
     <title>AP Calculus Website</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    	$(document).ready(function() {
-			$(".calcContent").hide();
-			var calcHidden = true;
-			var u2hidden = true;
-			$("#selectorCalculus").click(function(){
-				if(calcHidden) {
-					$(".calcContent").show(500);
-					calcHidden = false;
-				}else{
-					$(".calcContent").hide(500);
-					calcHidden = true;
-				}
-				
-			});
-			$("#unit2button").click(function(){
-				if(u2hidden) {
-					$("#unit2exercises").show(500);
-					u2hidden = false;
-				}else{
-					$("#unit2exercises").hide(500);
-					u2hidden = true;
-				}
-				
-			});
-			
-			
-		});
-    </script>
-    <style>
-		body {
-			background-color: #eeeee4;
-		}
-		.menuBarParent {
-			width: 98.25%;
-			text-align: center;
-			background-color: #1e81b0;
-			padding: 15px;
-		}
-		.centerButtonsWrapper {
-			display: inline-block;
-			margin: 0 auto;
-			padding: 3px;
-		}
-		.menuButton {
-			font-size: 24px;
-			font-family: Helvetica;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			padding-left: 100px;
-			padding-right: 100px;
-			border: none;
-		}
-		.menuButton:hover {
-			border: 1px solid black;
-			padding-top: 9px;
-			padding-bottom: 9px;
-			padding-left: 99px;
-			padding-right: 99px;
-		}
-		#selectorCalculus {
-			margin-right: 100px;
-			background-color: #e28743;
-		}
-		#selectorOther {
-			margin-left: 100px;
-			background-color: #eab676;
-		}
-		.contentParent {
-			background-color: #76b5c5;
-			width: 98.5%;
-			text-align: center;
-		}
-		.calcContent {
-			display: inline-block;
-			margin: 0 auto;
-			width: 98.5%;
-		}
-		#unit2exercises {
-			display: none;
-			width: 98.5%;
-			height: 1000px;
-		}
-		.contentButton {
-			font-size: 24px;
-			font-family: Helvetica;
-			margin: 5px;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			padding-left: 10px;
-			padding-right: 10px;
-			border: none;
-			float: left;
-		}
-		.contentButton:hover {
-			border: 1px solid black;
-			padding-top: 9px;
-			padding-bottom: 9px;
-			padding-left: 9px;
-			padding-right: 9px;
-		}
-		
-    </style>
+	<!-- moved javascript and css to separate files to make it all easier to manage -->
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 	<div class="menuBarParent">
@@ -118,18 +18,14 @@
 	<div class="contentParent">
 		<div class="calcContent">
 			<button class="contentButton" id="unit2button">Unit 2 Exercises</button>
-			<iframe src="http://45.37.77.60/Calc%20Unit%202%20Exercises.pdf" id="unit2exercises"></iframe>
+			<button class="contentButton" id="unit2answersButton">Unit 2 Answers</button>
+			<button class="contentButton" id="unit3button">Unit 3 Exercises</button>
+			<button class="contentButton" id="unit3answersButton">Unit 3 Answers</button>
+			<iframe src="http://45.37.77.60/Calc%20Unit%202%20Exercises.pdf" class="contentDisplay" id="unit2exercises"></iframe>
+			<iframe src="http://45.37.77.60/Calc%20Unit%202%20Answers.pdf" class="contentDisplay" id="unit2answers"></iframe>
+			<iframe src="http://45.37.77.60/Calc%20Unit%203%20Exercises.pdf" class="contentDisplay" id="unit3exercises"></iframe>
+			<iframe src="http://45.37.77.60/Calc%20Unit%203%20Answers.pdf" class="contentDisplay" id="unit3answers"></iframe>
 		</div>
 	</div>
-    
-    <!-- <hr style="text-align: center;width: 110%;size: 3px;border-color: #be9eff;margin-top: 0%;margin-left: -5%;position: absolute; top: 55px;">
-    <p style="text-align:center"><font size="4"><a href=http://45.37.77.60/Calc.html>Redirect to Calculus Google Classroom</a></font></p>
-    <p style="text-align:center"><font size="4"><a href=http://45.37.77.60/LatinIII.html>Redirect to Latin III Google Classroom</a></font></p>
-    <p style="text-align:center"><font size="4"><a href=http://45.37.77.60/APUSH.html>Redirect to APUSH Google Classroom</a></font></p>
-    <p style="text-align:center"><font size="4"><a href=http://45.37.77.60/Band.html>Redirect to Band Google Classroom</a></font></p>
-    <p style="text-align:center"><font size="4"><a href=http://45.37.77.60/Calc%20Unit%202%20Exercises.pdf>Calculus Unit 2 Exercises</a></font></p>
-    <p style="text-align:center"><font size="4"><a href=http://45.37.77.60/Calc%20Unit%202%20Answers.pdf>Calculus Unit 2 Exercise Answers</a></font></p>
-    <p style="text-align:center"><font size="4"><a href=http://45.37.77.60/Calc%20Unit%203%20Exercises.pdf>Calculus Unit 3 Exercises</a></font></p>
-    <p style="text-align:center"><font size="4"><a href=http://45.37.77.60/Calc%20Unit%203%20Answers.pdf>Calculus Unit 3 Exercise Answers</a></font></p> -->
   </body>
 </html>
