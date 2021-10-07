@@ -2,51 +2,123 @@
 <html>
   <head>
     <title>AP Calculus Website</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
     	$(document).ready(function() {
-			$(#selectorCalculus).click(function(){
-				//Code in here should trigger when you click the calc button
+			$(".calcContent").hide();
+			var calcHidden = true;
+			var u2hidden = true;
+			$("#selectorCalculus").click(function(){
+				if(calcHidden) {
+					$(".calcContent").show(500);
+					calcHidden = false;
+				}else{
+					$(".calcContent").hide(500);
+					calcHidden = true;
+				}
+				
 			});
-			$(#selectorOther).click(function(){
-				//Code in here should trigger when you click the other button
+			$("#unit2button").click(function(){
+				if(u2hidden) {
+					$("#unit2exercises").show(500);
+					u2hidden = false;
+				}else{
+					$("#unit2exercises").hide(500);
+					u2hidden = true;
+				}
+				
 			});
+			
+			
 		});
     </script>
     <style>
+		body {
+			background-color: #eeeee4;
+		}
 		.menuBarParent {
-			position: absolute;
-			<!-- "left: 50%" aligns the left of the group to the center of the page -->
-			left: 50%;
-			<!-- The following line moves the group to the left of the center to make it actually centered (I didn't actually center it but it's close -->
-			margin-left: -100px;
+			width: 98.25%;
+			text-align: center;
+			background-color: #1e81b0;
+			padding: 15px;
 		}
 		.centerButtonsWrapper {
 			display: inline-block;
-			text-align: right;
+			margin: 0 auto;
+			padding: 3px;
+		}
+		.menuButton {
+			font-size: 24px;
+			font-family: Helvetica;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 100px;
+			padding-right: 100px;
+			border: none;
+		}
+		.menuButton:hover {
+			border: 1px solid black;
+			padding-top: 9px;
+			padding-bottom: 9px;
+			padding-left: 99px;
+			padding-right: 99px;
 		}
 		#selectorCalculus {
-			font-size: 24px;
-			font-family: Helvetica;
-			color: #545454;
+			margin-right: 100px;
+			background-color: #e28743;
 		}
 		#selectorOther {
+			margin-left: 100px;
+			background-color: #eab676;
+		}
+		.contentParent {
+			background-color: #76b5c5;
+			width: 98.5%;
+			text-align: center;
+		}
+		.calcContent {
+			display: inline-block;
+			margin: 0 auto;
+			width: 98.5%;
+		}
+		#unit2exercises {
+			display: none;
+			width: 98.5%;
+			height: 1000px;
+		}
+		.contentButton {
 			font-size: 24px;
 			font-family: Helvetica;
-			color: #545454;
-			<!-- Line Below Controls Space between "Other" button and "AP Calculus" button -->
-			margin-left: 50px;
+			margin: 5px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border: none;
+			float: left;
+		}
+		.contentButton:hover {
+			border: 1px solid black;
+			padding-top: 9px;
+			padding-bottom: 9px;
+			padding-left: 9px;
+			padding-right: 9px;
 		}
 		
     </style>
   </head>
   <body>
-	<!-- I'm too lazy to change this but you shouldnt put all the CSS formatting in one line even though it works -->
-	<p style="text-align: center;width: 100;height: 55;margin: 0px;font-size: 24px;font-family: Helvetica;color: #545454;position: absolute;display:inline;top: 8px;left: 4%;">Home</p>
 	<div class="menuBarParent">
 		<div class="centerButtonsWrapper">
-			<button id="selectorCalculus">AP Calculus</button>
-			<button id="selectorOther">Other</button>			
+			<button class="menuButton" id="selectorCalculus">AP Calculus</button>
+			<button class="menuButton" id="selectorOther">Other</button>			
+		</div>
+	</div>
+	<br>
+	<div class="contentParent">
+		<div class="calcContent">
+			<button class="contentButton" id="unit2button">Unit 2 Exercises</button>
+			<iframe src="http://45.37.77.60/Calc%20Unit%202%20Exercises.pdf" id="unit2exercises"></iframe>
 		</div>
 	</div>
     
